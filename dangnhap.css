@@ -1,0 +1,138 @@
+body {
+    background-size: cover;
+    background-position-y: -80px;
+    font-size: 16px;
+}
+
+#wrapper {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--body-font);
+    color: var(--body-color);
+    background-image: url("image/saigon.jpeg");
+    background-image: url(image/saigon2.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: color-dodge;
+    background-color: rgba(18, 21, 39, 0.86);
+    display: flex;
+    padding: 1em 2em;
+    overflow: hidden;
+}
+
+#form-login {
+    max-width: 400px;
+    background: #3d3d3d;
+    flex-grow: 5;
+    padding: 30px 30px 40px;
+    opacity: 0.9;
+    border-radius: 30px;
+}
+
+.form-heading {
+    font-size: 25px;
+    color: #ffd154;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    border-bottom: 1px solid #464646;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.form-group i {
+    color: #ffd154;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+.form-input {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #ffd154;
+    flex-grow: 1;
+}
+
+.form-input::placeholder {
+    color: #ffd154;
+}
+
+#eye i {
+    padding-right: 0;
+    cursor: pointer;
+}
+
+.form-submit {
+    background: transparent;
+    border: 1px solid #464646;
+    color: #ffd154;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: 0.25s ease-in-out;
+    margin-top: 20 px;
+    border-radius: 20px;
+}
+
+.form-submit:hover {
+    border: 1px solid #54a0ff;
+}
+
+.form-password {
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.form-qmk {
+    background: transparent;
+    border-radius: 20px;
+    padding: 6px 10px;
+    float: left;
+    color: #ffd154;
+    width: 50%;
+    border: 1px solid #464646;
+}
+
+.sign-up {
+    background: transparent;
+    border-radius: 20px;
+    float: right;
+    padding: 6px 10px;
+    color: #ffd154;
+    width: 40%;
+    border: 1px solid #464646;
+    text-align: center;
+}
+
+.form-qmk:hover {
+    border: 1px solid #54a0ff;
+}
+
+.sign-up:hover {
+    border: 1px solid #54a0ff;
+}
+
+.sign {
+    color: #ffd154;
+    padding-top: 10px;
+    margin-left: 30px;
+    float: left;
+    font-size: 16px;
+}
+
+.sign a {
+    color: #ffd154;
+    font-variant: small-caps;
+    font-weight: 900;
+}
+
+.sign a:hover {
+    color: #54a0ff;
+}

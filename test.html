@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps JavaScript API</title>
+</head>
+<body>
+  <div id="map" style="height: 1000px; width: 100%;"></div> <!-- Đây là nơi bản đồ sẽ được hiển thị -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_6_lOG2FfP_u9zRVfPASWN0hz0I7xjT4&callback=initMap" async defer></script>
+  <script>
+    var map; // Biến toàn cục để lưu trữ đối tượng bản đồ
+
+    // Hàm khởi tạo bản đồ và đánh dấu vị trí
+    function initMap() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var myLatLng = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            zoom: 8
+          });
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Đây là vị trí của tôi!'
+          });
+        }, function() {
+          // Xử lý lỗi nếu không thể lấy vị trí
+          console.log('Không thể lấy vị trí hiện tại');
+        });
+      } else {
+        // Xử lý trường hợp trình duyệt không hỗ trợ Geolocation
+        console.log('Trình duyệt không hỗ trợ Geolocation');
+      }
+    }
+    initMap(); // Gọi hàm initMap() để khởi tạo bản đồ
+  </script>
+</body>
+</html>
